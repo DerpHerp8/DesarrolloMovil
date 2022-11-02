@@ -6,9 +6,19 @@
 
 import 'package:flutter/material.dart';
 import 'login.dart';
+import 'mainpage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      title: 'MyApp',
+      initialRoute: 'loginpage',
+      routes: {
+        '/': (context) => const MainPage(),
+        'loginpage': (context) => const LoginPage(),
+      },
+    )
+  );
 }
 
 class MyApp extends StatelessWidget {
